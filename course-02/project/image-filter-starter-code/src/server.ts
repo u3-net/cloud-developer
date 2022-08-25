@@ -34,14 +34,14 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     // destruct our path params
     let { image_url } = req.params;
     
-        // check to make sure the id is set
+        // check to make sure the image_url is set
     if (!image_url) { 
       // respond with an error if not
       return res.status(400).send(`image url is required`);
     }
 
 
-    //return the car with a sucess status code
+    //return the image with a sucess status code
     res.status(200).send(filterImageFromURL(image_url));
     
     
